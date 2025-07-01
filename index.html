@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Posts Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <header>
+            <h1>LinkedIn Posts Analysis</h1>
+            <div class="filters">
+                <select id="authorFilter">
+                    <option value="all">All Profiles</option>
+                </select>
+                <select id="contentTypeFilter">
+                    <option value="all">All Content Types</option>
+                </select>
+                <select id="themeFilter">
+                    <option value="all">All Themes</option>
+                </select>
+            </div>
+        </header>
+
+        <div class="conclusions-section">
+            <p id="conclusions"></p>
+        </div>
+
+        <div class="profile-info" id="profileInfo">
+            <!-- Profile summary will be displayed here -->
+        </div>
+
+        <div class="top-posts-section">
+            <h2>Most Successful Posts</h2>
+            <div id="topPosts" class="top-posts-grid"></div>
+        </div>
+
+        <div class="charts-container">
+            <div class="chart-wrapper">
+                <h2>Average Score by Theme</h2>
+                <canvas id="engagementChart"></canvas>
+            </div>
+            <div class="metrics-container">
+                <div class="chart-wrapper half">
+                    <h2>Average Likes by Content Type</h2>
+                    <canvas id="likesChart"></canvas>
+                </div>
+                <div class="chart-wrapper half">
+                    <h2>Average Comments by Content Type</h2>
+                    <canvas id="commentsChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="insights-section">
+            <h2>Content Performance Insights</h2>
+            <div id="insights"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
